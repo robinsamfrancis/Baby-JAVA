@@ -1,0 +1,8 @@
+class Tester {
+	public static void main(String[] args) {
+	    float F= 102;
+	    float C = (float)(((F-32)/9)*5);
+	    System.out.println(C);
+		// Implement your code here 
+	}
+}
