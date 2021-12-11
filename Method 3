@@ -1,0 +1,52 @@
+package basics2;
+
+
+
+//ADDING A METHOD TO A CLASS
+
+public class Demo4 {
+public static void main (String[]args) {
+		
+		
+		aircraft cessna = new aircraft(); // creates object of class tester
+		aircraft piper = new aircraft(); // creates another object of class
+
+		cessna.fuelCapacity= 6;
+		cessna.passsengers=4;
+		cessna.fuelBurnRate= 56.5;
+		cessna.speed= 120;
+		
+		piper.fuelCapacity= 10;
+		piper.passsengers=40;
+		piper.fuelBurnRate= 569.5;
+		piper.speed= 1200;
+		
+		System.out.println("Cessna");
+		cessna.calculateEndurance();
+		
+		System.out.println("pipper");
+		piper.calculateEndurance();
+	}
+
+}
+
+
+class aircraft{
+	int passsengers;      
+	int speed;               
+	double fuelCapacity;    
+	double fuelBurnRate; 
+	
+//METHOD TO CALCULATE THE AIRCRAFT ENDURANCE
+	
+	void calculateEndurance() {  //its not returning any value, thats y we put it void
+		double endurance;
+		endurance = fuelCapacity/fuelBurnRate;
+		System.out.println("The endurance of aircraft is:"+ endurance);
+		
+	}
+	
+	
+	
+}
+
