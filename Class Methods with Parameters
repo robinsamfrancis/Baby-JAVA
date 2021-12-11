@@ -1,0 +1,52 @@
+package basics2;
+
+public class Lesson8 {
+public static void main (String[]args) {
+		
+		
+		aircraft cessna = new aircraft(); // creates object of class tester
+		aircraft piper = new aircraft(); // creates another object of class
+
+		cessna.fuelCapacity= 6;
+		cessna.passsengers=4;
+		cessna.fuelBurnRate= 56.5;
+		cessna.speed= 120;
+		
+		piper.fuelCapacity= 10;
+		piper.passsengers=40;
+		piper.fuelBurnRate= 569.5;
+		piper.speed= 1200;
+		
+		System.out.println("Piper take"+piper.fuelNeeded(4.5) + "gallons of fuel");
+		System.out.println("Cessna take"+cessna.fuelNeeded(2.5)+"gallons of fuel");
+	}
+
+}
+
+
+class aircraft{
+	int passsengers;      
+	int speed;               
+	double fuelCapacity;    
+	double fuelBurnRate; 
+	
+// METHOD TO CALCULATE THE AIRCRAFT ENDURANCE
+	
+    double calculateEndurance() {  //its not returning any value, thats y we put it void
+		double endurance;
+		endurance = fuelCapacity/fuelBurnRate;
+		System.out.println("The endurance of aircraft is:"+ endurance);
+		return endurance;
+		
+	}
+	
+    double fuelNeeded(double time) { // PARAMETER ADDED
+    	return fuelBurnRate = time;
+    	
+    }
+	
+	
+}
+
+
+
