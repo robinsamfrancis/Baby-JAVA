@@ -8,16 +8,16 @@ public class Demo4 {
 public static void main (String[]args) {
 		
 		
-		aircraft cessna = new aircraft(); // creates object of class tester
-		aircraft piper = new aircraft(); // creates another object of class
+		aircraft cessna = new aircraft();   // creates object of class aircraft
+		aircraft piper = new aircraft(); // creates another object of class aircraft
 
 		cessna.fuelCapacity= 6;
-		cessna.passsengers=4;
+		cessna.passsengers=4;       //calling a method which is a part of the object
 		cessna.fuelBurnRate= 56.5;
 		cessna.speed= 120;
 		
 		piper.fuelCapacity= 10;
-		piper.passsengers=40;
+		piper.passsengers=40;       //calling the method which is a part of the object
 		piper.fuelBurnRate= 569.5;
 		piper.speed= 1200;
 		
@@ -32,12 +32,13 @@ public static void main (String[]args) {
 
 
 class aircraft{
+   // Defining variables in the method
 	int passsengers;      
 	int speed;               
 	double fuelCapacity;    
 	double fuelBurnRate; 
 	
-//METHOD TO CALCULATE THE AIRCRAFT ENDURANCE
+//DEFINING METHOD TO CALCULATE THE AIRCRAFT ENDURANCE
 	
 	void calculateEndurance() {  //its not returning any value, thats y we put it void
 		double endurance;
