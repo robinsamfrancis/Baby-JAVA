@@ -1,0 +1,53 @@
+package basics2;
+
+//program execution starts in main
+
+public class Demo {
+	public static void main(String[]args) {
+		
+		//in memory we have two objects aircraft1 and aircraft2
+		//which is a part of class Tester. These objects are assigned same
+		//variables since they belong to same class
+		
+		Tester aircraft1 = new Tester(); // creates object of class tester
+		Tester aircraft2 = new Tester(); // creates another object of class
+		
+		
+		
+		//Accessing the variables from the tester class
+		aircraft1.fuelCapacity= 6;
+		aircraft1.passsengers=4;
+		aircraft1.fuelBurnRate= 56.5;
+		aircraft1.speed= 120;
+		
+		System.out.println("Aircraft 1  passengers"+ aircraft1.passsengers);
+		System.out.println("Aircraft 1  passengers"+ aircraft1.fuelBurnRate);
+		System.out.println("Aircraft 1  passengers"+ aircraft1.fuelCapacity);
+		System.out.println("Aircraft 1  passengers"+ aircraft1.speed);
+		
+		
+		aircraft2.fuelCapacity= 10;
+		aircraft2.passsengers=40;
+		aircraft2.fuelBurnRate= 569.5;
+		aircraft2.speed= 1200;
+		
+		System.out.println("Aircraft 2  passengers"+ aircraft2.passsengers);
+		System.out.println("Aircraft 2  passengers"+ aircraft2.fuelBurnRate);
+		System.out.println("Aircraft 2  passengers"+ aircraft2.fuelCapacity);
+		System.out.println("Aircraft 2  passengers"+ aircraft2.speed);
+		
+	}
+
+}
+
+//Class is a template/blueprint of the code
+
+class Tester{
+	int passsengers;          // number of people
+	int speed;               //miles per hour
+	double fuelCapacity;    //gallons
+	double fuelBurnRate;   //gallons per hour
+	
+	
+	
+}
