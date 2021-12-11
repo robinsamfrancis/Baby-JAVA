@@ -1,0 +1,67 @@
+package basics2;
+
+// ADDING A CONSTRUCTOR
+
+//Storing the values into the object takes a lots of memory and it will be difficult
+// to enter values if there are many objects in the class. Therefore constructors 
+// basically eliminates this need.
+
+// Constructor name should be the exact same as the class name of the method.
+//Its a method that basically returns nothing back.
+//We don't have to mention void or anything in front of the constructor
+
+
+public class Lesson8 {
+public static void main (String[]args) {
+
+//CREATION OF OBJECTS
+		
+		aircraft cessna = new aircraft(6,4,56.5,120);
+		aircraft piper = new aircraft(10,40,59.9,1200);
+
+		System.out.println("Piper take"+piper.fuelNeeded(4.5) + "gallons of fuel");
+		System.out.println("Cessna take"+cessna.fuelNeeded(2.5)+"gallons of fuel");
+	}
+
+}
+
+class aircraft{
+	
+// INITIALIZATION
+	
+	int passsengers;      
+	int speed;               
+	double fuelCapacity;    
+	double fuelBurnRate;
+	
+// CONSTRUCTOR
+	
+	aircraft(int p, int c,double fc, double fbr ){ //we can name it as we wish
+		passsengers = p;
+		speed = c;
+		fuelCapacity = fc;
+		fuelBurnRate = fbr;
+		
+	}
+	
+
+	// METHOD TO CALCULATE THE AIRCRAFT ENDURANCE
+	
+    double calculateEndurance() {  //its not returning any value, thats y we put it void
+		double endurance;
+		endurance = fuelCapacity/fuelBurnRate;
+		System.out.println("The endurance of aircraft is:"+ endurance);
+		return endurance;
+		
+	}
+	
+    double fuelNeeded(double time) { // PARAMETER ADDED
+    	return fuelBurnRate = time;
+    	
+    }
+	
+	
+}
+
+
+
