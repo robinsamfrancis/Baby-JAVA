@@ -1,0 +1,93 @@
+package basics2;
+
+// Static keyword
+
+// When a variable is set to static it behaves like a global variable
+// We can use it even before the object is created in the public class
+// Static appears to not only variables, but also classes.
+
+public class Lesson8 {
+	public static void main (String[]args) {
+		
+		aircraft.wings=4; //accessing before the object is called
+
+		
+		aircraft cessna = new aircraft(6,4,56.5,120);
+		aircraft piper = new aircraft(10,40,59.9,1200);
+
+		System.out.println("Piper take"+piper.fuelNeeded(4.5) + "gallons of fuel");
+		System.out.println("Cessna take"+cessna.fuelNeeded(2.5)+"gallons of fuel");
+		
+		cessna.setPassengers(10);
+		
+		// STATIC
+		
+		aircraft.wings=2; // we call a static keyword with class name and not by object.
+		System.out.println("All of my aircraft is having wings:"+ aircraft.wings);
+		
+		Math.cos(5.56);  // Math is an inbuilt class. This can be accessed
+		// even if we havent created any objects in the class but we are able to use it in this class
+		// it is because this method here is STATIC!!!
+		
+		
+	
+	}
+	
+
+}
+
+class aircraft{  
+	
+	private int passsengers;   
+	int speed;               
+	static double fuelCapacity;  // set only static if all aircraft has got same fuel capacity
+	static double fuelBurnRate; //set only static if all aircraft has got same fuel burn rate
+	
+	// aircraft has got 2 wings and that's same for every aircraft
+	// so we can set a variable as static
+	
+	static int wings;  // unchanging
+	
+	
+// CONSTRUCTOR
+	
+	aircraft(int p, int c,double fc, double fbr ){ //we can name it as we wish
+		passsengers = p;
+		speed = c;
+		fuelCapacity = fc;
+		fuelBurnRate = fbr;
+		
+	}
+	
+
+// Declaring a method as Static
+	
+    static double calculateEndurance() {  //its not returning any value, thats y we put it void
+		double endurance;
+		endurance = fuelCapacity/fuelBurnRate;
+		System.out.println("The endurance of aircraft is:"+ endurance);
+		return endurance;
+		
+	}
+	
+    double fuelNeeded(double time) { // PARAMETER ADDED
+    	return fuelBurnRate = time;
+    	
+    }
+    
+    void setPassengers(int p) {
+    	if ((p>0) &&(p<=10))
+    		{
+    		passsengers =p;
+    		System.out.println("Revised passesnger count:"+ passsengers);
+    		}
+    	else System.out.println("Error setting passsengers");
+    }
+    
+    
+	
+	
+}
+
+
+
