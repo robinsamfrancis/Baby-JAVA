@@ -1,0 +1,71 @@
+package basics2;
+
+// Accessing the private data
+
+
+public class Lesson8 {
+	public static void main (String[]args) {
+
+		
+		aircraft cessna = new aircraft(6,4,56.5,120);
+		aircraft piper = new aircraft(10,40,59.9,1200);
+
+		System.out.println("Piper take"+piper.fuelNeeded(4.5) + "gallons of fuel");
+		System.out.println("Cessna take"+cessna.fuelNeeded(2.5)+"gallons of fuel");
+		
+		cessna.setPassengers(10); //setter method
+	}
+
+}
+
+class aircraft{  // when nothing is specified java use it as public by default
+	// when private is specified then that can be only accessed within that class
+	// the value can't be changed
+	
+	private int passsengers; //changed to private     
+	int speed;               
+	double fuelCapacity;    
+	double fuelBurnRate;
+	
+// CONSTRUCTOR
+	
+	aircraft(int p, int c,double fc, double fbr ){ //we can name it as we wish
+		passsengers = p;
+		speed = c;
+		fuelCapacity = fc;
+		fuelBurnRate = fbr;
+		
+	}
+	
+
+	// METHOD TO CALCULATE THE AIRCRAFT ENDURANCE
+	
+    double calculateEndurance() {  //its not returning any value, thats y we put it void
+		double endurance;
+		endurance = fuelCapacity/fuelBurnRate;
+		System.out.println("The endurance of aircraft is:"+ endurance);
+		return endurance;
+		
+	}
+	
+    double fuelNeeded(double time) { // PARAMETER ADDED
+    	return fuelBurnRate = time;
+    	
+    }
+    
+    void setPassengers(int p) {
+    	if ((p>0) &&(p<=10))
+    		{
+    		passsengers =p;
+    		System.out.println("Revised passesnger count:"+ passsengers);
+    		}
+    	else System.out.println("Error setting passsengers");
+    }
+    
+    
+	
+	
+}
+
+
+
