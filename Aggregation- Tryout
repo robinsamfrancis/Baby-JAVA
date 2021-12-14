@@ -1,16 +1,19 @@
 package Basics;
 
+// ORDER CLASS
 class Order {
 	private int orderId;
 	private Food orderedFoods;
 	private double totalPrice;
 	private String status;
 	
+// CONSTRUCTOR
 	public Order(int orderId, Food orderedFoods) {
 		this.orderId = orderId;
 		this.orderedFoods = orderedFoods;
 		this.status = "Ordered";
 	}
+//GETTER AND SETTER
 	public int getOrderId() {
 		return orderId;
 		}
@@ -36,6 +39,8 @@ class Order {
 		this.status = status;
 		}
 	
+//FOOD CLASS
+	
 }
 
 class Food {
@@ -45,13 +50,7 @@ class Food {
 	private int quantityAvailable;
 	private double unitPrice;
 	
-	//public Food(String foodName, String cuisine, String foodType, int quantityAvailable, double unitPrice) {
-		//this.foodName = foodName;
-		//this.cuisine = cuisine;
-		//this.foodType = foodType;
-		//this.quantityAvailable = quantityAvailable;
-		//this.unitPrice = unitPrice;
-	//}
+// GETTER AND SETTER
 	public String getFoodName() {
 		return foodName;
 		}
@@ -87,13 +86,17 @@ class Food {
     
     public class Methods {
     	public static void main(String[] args) { 
+    		
+   //FOOD OBJECT CREATION AND ASSIGNING VALUES TO FOOD CLASS
     		Food food = new Food(); 
     		food.setFoodName("Pizza Margherita"); 
     		food.setCuisine("Italian"); 
     		food.setFoodType("Veg"); 
     		food.setQuantityAvailable(10); 
     		food.setUnitPrice(8.0); 
-    		Order order = new Order(101, food); 
+    		
+   // ORDER OBJECT CREATION AND ASSIGNING VALUES USING CONSTRUCTOR
+    		Order order = new Order(101, food); //PASSING FOOD WHILE CREATING ORDER 
     		 
     		System.out.println("Order placed successfully!"); 
     		System.out.println("You have ordered: "+ order.getOrderedFoods().getFoodName()); 
@@ -103,3 +106,6 @@ class Food {
     	
     	}
     
+    
+	
+		
