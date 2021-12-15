@@ -1,0 +1,31 @@
+package assignment;
+
+public class Rectangle {
+	float length;
+	float width;
+	
+	public double calculateArea() {
+		double area;
+		area = length*width;
+		double areaRoundOff = Math.round(area*100)/100.0;
+		return areaRoundOff;
+	}
+	public double calculatePerimeter() {
+		double perimeter;
+		perimeter = 2*(length + width);
+		double perimeterRoundOff = Math.round(perimeter*100)/100.0;
+		return perimeterRoundOff;
+	}
+	
+
+}
+
+class Rectangle1{
+	public static void main(String[]args) {
+		Rectangle rectangle = new Rectangle();
+		rectangle.length = 12f;
+		rectangle.width = 5f;
+		System.out.println("Area="+ rectangle.calculateArea());
+		System.out.println("Perimeter="+ rectangle.calculatePerimeter());
+	}
+}
