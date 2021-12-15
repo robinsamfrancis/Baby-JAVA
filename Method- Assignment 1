@@ -1,0 +1,38 @@
+package assignment;
+
+public class Order {
+	public int orderId;
+	public String orderedFoods;
+	public double totalPrice;
+	public String status;
+	
+	public double calculateTotalPrice(int unitPrice) {
+		totalPrice = unitPrice * (1+(5/100));
+		return totalPrice;
+	}
+	
+	public void displayDetails() {
+		System.out.println("Order Details");
+		System.out.println("Order Id:"+ orderId);
+		System.out.println("Ordered Food:" + orderedFoods);
+		System.out.println("Order Status:" + status);
+		System.out.println("Total Price:"+ totalPrice);
+	}
+	
+
+}
+
+class Order1{
+	public static void main(String[]args) {
+		Order o = new Order();
+		o.orderId = 101;
+		o.orderedFoods = "Spinach Alfedo Pasta";
+		o.status ="Ordered";
+		o.totalPrice = o.calculateTotalPrice(34);
+		o.displayDetails();
+		
+	}
+	
+
+	
+}
