@@ -1,0 +1,29 @@
+package assignment;
+
+public class Restaurant {
+
+	public String restaurantName;
+	public String restaurantAddress;
+	public long restaurantContact;
+	public float rating;
+	
+	public void displayRestaurantDetails() {
+		System.out.println("Restaurant Details \n******");
+		System.out.println("Restaurant Name:" + restaurantName);
+		System.out.println("Restaurant Rating:"+ rating);
+		System.out.println("Restaurant Contact:" + restaurantContact);
+		System.out.println("Restaurant Address:"+ restaurantAddress);
+	}
+	
+	class Restaurant1{
+		public static void main(String[]args){
+			Restaurant r = new Restaurant();
+			r.restaurantName = "McDonalds";
+			r.rating = 4.1f;
+			r.restaurantContact = 987654321;
+			r.restaurantAddress = "St thomas Chruch";
+			r.displayRestaurantDetails();
+			
+		}
+	}
+}
