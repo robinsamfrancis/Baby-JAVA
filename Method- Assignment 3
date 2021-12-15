@@ -1,0 +1,29 @@
+package assignment;
+
+public class Calculator {
+	int num;
+	
+	// Method for adding the numbers
+	
+	public int sumOfDigits() {
+		int a = num; //input number
+		int rem = 0; //remainder
+		int sum =0; // initializing sum to be 0
+		
+		while(a!=0) {
+			rem = a%10; // remainder equals a modulas 10
+			sum = sum + rem; //sum equals sum+remainder
+			a=a/10;     // a then become int of a/10 and the while loop continues	
+		}
+		
+		return sum;	
+	}
+}
+
+class Calculator1{
+	public static void main(String[] args) {
+		Calculator calculator = new Calculator();
+		calculator.num = 64;
+		System.out.println(calculator.sumOfDigits());	
+	}
+}
