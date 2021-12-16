@@ -1,0 +1,62 @@
+package Arrays1;
+
+public class Restaurant{
+	private String restaurantName;
+	private long[] restaurantContacts;
+	private String restaurantAddress;
+	private float rating;
+	
+	public Restaurant(String restaurantName, long[] restaurantContacts, String restaurantAddress, float rating){
+		this.restaurantName=restaurantName;
+		this.restaurantContacts = restaurantContacts;
+		this.restaurantAddress = restaurantAddress;
+		this.rating=rating;
+	}
+	public String getRestuarnatName() {
+		return restaurantName;
+	}
+	public void setRestuarnatName(String restaurantName) {
+		this.restaurantName = restaurantName;
+	}
+	public long[] getRestaurantContacts() {
+		return restaurantContacts;
+	}
+	public void setRestuarantContacts(long[] restaurantContacts) {  // Setting private Arrays
+		this.restaurantContacts = restaurantContacts;
+	}
+	public String getRestaurantAddress() {
+		return restaurantAddress;
+	}
+	public void setRestaurantAddress(String restaurantAddress) {
+		this.restaurantAddress = restaurantAddress;
+	}
+	public float getRating() {
+		return rating;
+	}
+	public void setRating(float rating) {
+		this.rating = rating;
+	}
+	public void displayRestaurantDetails() {
+		System.out.println("Displaying restaurant details \n *****");
+		System.out.println("Restaurant Name:"+ this.restaurantName);
+		System.out.println("Restaurant Rating:"+ this.rating);
+		System.out.println("Restaurant Contacts:");
+		for(int i=0; 1<this.restaurantContacts.length; i++)  //Displaying the values in array
+			System.out.println(this.restaurantContacts[i]);
+		System.out.println("Restaurant Adress:"+ this.restaurantAddress);
+	}
+	public class Tester {
+		public static void main(String[] args) {
+			long[] restaurantContacts = { 9992346725L, 9992346726L, 9992346727L };
+			Restaurant restaurant1 = new Restaurant("SwiftFood",
+					restaurantContacts, "Carolina Street, Springfield, 62702", 4.1f);
+			restaurant1.displayRestaurantDetails();
+		}
+		
+	}
+	
+	
+	
+	
+
+}
